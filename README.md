@@ -1,8 +1,8 @@
 <img width="70px" src="./Images/Logo.webp" />
 
-# CodeWizard
+# CodeAix
 
-#### CodeWizard is a full-stack web-based code editor that leverages AI to enhance your coding experience. It allows users to write, run, debug, and convert code across multiple programming languages. Additionally, it offers code quality checks and integration with GitHub for easy code importing. Built with React, TypeScript, Node.js, and Chakra UI, CodeWizard provides a responsive, user-friendly interface that supports a variety of devices.
+#### CodeAix is a full-stack web-based code editor that leverages AI to enhance your coding experience. It allows users to write, run, debug, and convert code across multiple programming languages. Additionally, it offers code quality checks and integration with GitHub for easy code importing. Built with React, TypeScript, Node.js, and Chakra UI, CodeAix provides a responsive, user-friendly interface that supports a variety of devices.
 
 ## **Key Features** :
 
@@ -31,7 +31,7 @@
 
 ## **Installation & Getting Started** :
 
-1. Clone repository: **`git clone https://github.com/prateekshuklaps0/CodeWizard-AI-Code-Converter`**
+1. Clone repository: **`git clone https://github.com/shubz23/CodeAix.git`**
 2. Navigate to the Front-End directory: **`cd Front-End`**
 3. Create `.env` file in the root directory and add :
 
