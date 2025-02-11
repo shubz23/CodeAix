@@ -7,21 +7,24 @@ const Open_API_Url =
 const cors = require("cors");
 const axios = require("axios");
 const express = require("express");
+const connectDB = require("./src/db");
+const userRoutes = require("./src/routes/userRoutes");
 
 const app = express();
-
 app.use(cors());
 app.use(express.json());
-
+connectDB();
 // HomeRoute
 app.get("/", async (_, res) => {
   try {
-    res.status(200).json({ message: "Welcome to CodeAix ✒️" });
+    res.status(200).json({ message: "Welcome to CodeAIx ✒️" });
   } catch (error) {
     console.log("Home Route Error :-", error);
     res.status(500).json({ message: "HomeRoute Error❗", ...error });
   }
 });
+// User Routes
+app.use("/api/users", userRoutes);
 
 // Run Code
 app.post("/run", async (req, res) => {
@@ -40,6 +43,7 @@ app.post("/run", async (req, res) => {
                 * Any difference between the output you generate and the output from a real code runtime environment could compromise the reliablity of my project, so make sure to study the code line by line, only after a thorough examination provide the output you generated.
                 * If the code is valid, compile it like a real runtime environment would do and return nothing else but the output of the code.
                 * If the code is incomplete or ambiguous, provide a text alerting me to this, as instructed above.
+                * If the code contains even the slightest error, provide a detailed description of the error and its location in the code.
                 * If the code includes language-specific or environment-specific requirements (e.g., a specific runtime or library), make assumptions based on common defaults unless specified otherwise.
                 * Do not provide any explanations or additional commentary beyond what is requested (i.e., the result of the compilation, error messages, or validation feedback).
                 
